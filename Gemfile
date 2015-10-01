@@ -34,11 +34,17 @@ gem 'puma'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Devise for user management
+gem 'devise'
+
+# Postmark for sending and receiving email
+gem 'postmark-rails', '>= 0.10.0'
 
 group :production do
   gem 'rails_12factor'
   # early timeout for web requests as heroku has a 30s timeout
   gem 'rack-timeout'
+  
 end
 
 group :development, :test do
@@ -50,6 +56,9 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # add in rspec
+  gem 'rspec'
 end
 
 ruby "2.2.3"
